@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>МАТРЕШКА RP - Донат</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="keywords"
+        content="гта россия,matreshka,crmp,крмп,перфект крмп,матрешка crmp,матрешка rp,скачать крмп,gta россия,gta russia,gta crmp,матрешка,матрешка-rp,матрешка role play,gta,criminal russia,cr-mp,gta,rp,roleplay,role play,samp,sa-mp,самп,са-мп,перфект,перфект-рп,перфект роле плей,гта,криминальная россия,кр-мп,играть онлайн,играть по сети,бесплатная игра,сервер,играть в гта,играть в gta,рп,начать">
+    <meta name="robots" content="index,follow" />
+
+    <link href="css/libs/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="shortcut icon" href="img/logo.png" type="image/png">
+    <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="stylesheet" href="css/media.min.css">
+    <link rel="stylesheet" href="css/libs/nice-select/nice-select.min.css">
+    <link href="css/libs/aos.css" rel="stylesheet">
+        </head>
+
+<body class="donate_page">
+
+
+
+    
+    <div id="app_block">
+        <div class="video_modal" id="promo_video">
+
+            <img src="img/icon/close.png" alt="" class="close " @click="closeModal('promo_video')">
+            <iframe class="video"
+                src="https://www.youtube.com/embed/dvBQLuZetyo?enablejsapi=1&version=3&playerapiid=ytplayer"
+                frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video_modal" id="play_video">
+            <img src="img/icon/close.png" alt="" class="close" @click="closeModal('play_video')">
+            <iframe class="video"
+                src="https://www.youtube.com/embed/MsysFv0lac0?enablejsapi=1&version=3&playerapiid=ytplayer"
+                frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-3 col-lg-3 col-md-1 col-3 logo">
+                        <a href="index.html"><img src="img/logo.png" alt=""></a>
+                    </div>
+                    <div class="col-xl-9 col-lg-9 col-md-11 col-9">
+                        <div class="mobile_menu"></div>
+                        <div class="nav_menu">
+                            <a href="index.html" >
+                                <img src="img/icon/Home.png" alt=""> Главная
+                            </a>
+                            <a href="https://forum.matrp.ru">
+                                <img src="img/icon/forum.png" alt=""> Форум
+                            </a>
+                            <a href="donate.html" class="active">
+                                <img src="img/icon/donate.png" alt=""> Пополнить счёт
+                                                                <b style="color: #7e51ff; margin-left: 5px">X2</b>
+                                                            </a>
+                            <a href="play.html" >
+                                <img src="img/icon/game.png" alt=""> Как начать играть
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="donate">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-6 col-lg-6 col-md-8">
+                <div class="title_form" data-aos="zoom-in">Пополнение счета
+
+                                        <b style="color: #c636ff">X2</b>
+                                    </div>
+                <form action="https://matrp.ru/unitpay/afterDonate" method='POST' id="donate" data-aos="fade-up">
+                    <input type="hidden" name="_token" value="PFYZUJjFyuiEICcdcoie4p7AVR91GkKt0ukJqxI8">                    <div class="alert"></div>
+                    <div class="input_wrap">
+                        <img src="img/icon/user_donate.png" alt="">
+                                                <select name="server" id="">
+                            <option value="0" selected disabled>Выберите сервер</option>
+                            <option value="1">Сервер #1</option>
+                            <option value="2">Сервер #2</option>
+                        </select>
+                                            </div>
+                    <div class="input_wrap">
+                        <img src="img/icon/user_donate.png" alt="">
+                        <input type="text" name="account" id="account" value=""
+                            placeholder="Введите никнейм">
+                    </div>
+                    <div class="input_wrap">
+                        <img src="img/icon/ruble.png" alt="">
+                        <input type="text" name="sum" id="sum" value=""
+                            placeholder="Введите сумму">
+                    </div>
+                    <div class="oferta">
+                        <div class="checkbox">
+                            <div class="block">
+                                <img src="img/icon/confirm.png" alt="">
+                            </div>
+                            <input type="checkbox" name="" id="ofert">
+                        </div>
+                        <!-- <input type="checkbox" class="styled-checkbox" name="" id=""> 
+                            <label for="styled-checkbox-1"></label> -->
+                        
+                        <label label for="styled-checkbox-1">Согласен с <a
+                                href="dogovor_oferty.pdf">Офертой</a></label>
+                    </div>
+                    <button>Пополнить</button>
+
+                </form>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xl-4 col-lg-4 col-md-6">
+                <div class="package" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="img/packages/random_car.png" alt="" class="bg">
+                    <div class="name">Случайное авто</div>
+                    <div class="btn" @click="openBuyPackages(1)">
+                        <div class="price">Купить (990 руб)</div>
+                        <img src="img/icon/Buy.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6">
+                <div class="package" data-aos="zoom-in" data-aos-delay="600">
+                    <img src="img/packages/random_skin.png" alt="" class="bg skin">
+                    <div class="name">Случайный скин</div>
+                    <div class="btn" @click="openBuyPackages(2)">
+                        <div class="price">Купить (499 руб)</div>
+                        <img src="img/icon/Buy.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6">
+                <div class="package" data-aos="zoom-in" data-aos-delay="900">
+                    <img src="img/packages/random_donate_car.png" alt="" class="bg ">
+                    <div class="name">Случайное донатное авто</div>
+                    <div class="btn" @click="openBuyPackages(3)">
+                        <div class="price">Купить (1299 руб)</div>
+                        <img src="img/icon/Buy.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-12">
+                <div class="or" data-aos="zoom-in" data-aos-delay="900">
+                    <div class="line"></div>
+                    <div class="text">Игровые пакеты</div>
+                    <div class="line"></div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6">
+                <div class="package" data-aos="zoom-in" data-aos-delay="1200">
+                    <img src="img/packages/blatnoy.png" alt="" class="bg ">
+                    <div class="info">
+                        <div class="name">Блатной</div>
+                        <div class="price">
+                            <div class="cost">2490 руб</div>
+                            <div class="sale">4990 руб</div>
+                        </div>
+                        <div class="line">
+                            <div class="circle"></div> BMW I8
+                        </div>
+                        <div class="line">
+                            <div class="circle"></div> СКИН 'БЛАТНОЙ'
+                        </div>
+                        <div class="line">
+                            <div class="circle"></div> 2 500 000 руб
+                        </div>
+                        <div class="line">
+                            <div class="circle"></div> VIP 30 ДНЕЙ
+                        </div>
+                        <div class="line">
+                            <div class="circle"></div> +5 СЛОТОВ ДЛЯ АВТО
+                        </div>
+                    </div>
+
+                    <div class="btn" @click="openBuyPackages(4)">
+                        <div class="price">Купить</div>
+                        <img src="img/icon/Buy.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6">
+                <div class="package" data-aos="zoom-in" data-aos-delay="1500">
+                    <img src="img/packages/major.png" alt="" class="bg major">
+                    <div class="info">
+                        <div class="name">Мажор</div>
+                        <div class="price">
+                            <div class="cost">990 руб</div>
+                            <div class="sale">1990 руб</div>
+                        </div>
+                        <div class="line">
+                            <div class="circle"></div> Tesla Model S
+                        </div>
+                        <div class="line">
+                            <div class="circle"></div> СКИН 'МАЖОР'
+                        </div>
+                        <div class="line">
+                            <div class="circle"></div> 1 000 000 руб
+                        </div>
+                        <div class="line">
+                            <div class="circle"></div> VIP 14 ДНЕЙ
+                        </div>
+                        <div class="line">
+                            <div class="circle"></div> +3 СЛОТА ДЛЯ АВТО
+                        </div>
+                    </div>
+
+                    <div class="btn" @click="openBuyPackages(5)">
+                        <div class="price">Купить</div>
+                        <img src="img/icon/Buy.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6">
+                <div class="package" data-aos="zoom-in" data-aos-delay="1800">
+                    <img src="img/packages/major.png" alt="" class="bg major">
+                    <div class="info">
+                        <div class="name">Начальный</div>
+                        <div class="price">
+                            <div class="cost">499 руб</div>
+                            <div class="sale">999 руб</div>
+                        </div>
+                        <div class="line">
+                            <div class="circle"></div> Lada Vesta
+                        </div>
+                        <div class="line">
+                            <div class="circle"></div> 500 000 руб
+                        </div>
+                        <div class="line">
+                            <div class="circle"></div> VIP 7 ДНЕЙ
+                        </div>
+                        <div class="line">
+                            <div class="circle"></div> НАБОР СКИЛЛОВ
+                        </div>
+                        <div class="line">
+                            <div class="circle"></div> НАБОР ЛИЦЕНЗИЙ
+                        </div>
+                    </div>
+
+                    <div class="btn" @click="openBuyPackages(6)">
+                        <div class="price">Купить</div>
+                        <img src="img/icon/Buy.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="modal fade" id="modalBuy" tabindex="-1" aria-labelledby="modalBuyLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <form action="https://matrp.ru/unitpay/buyPackages" method='POST' id="packages">
+            <div class="modal-content">
+                <input type="hidden" name="_token" value="PFYZUJjFyuiEICcdcoie4p7AVR91GkKt0ukJqxI8">                <div class="modal-body">
+                    <div class="alert"></div>
+                    <div class="label">Вы собираетесь купить бла-бла за 5000 рублей,
+                        введите свой никнейм для продолжения</div>
+                    <div class="input_wrap">
+                        <img src="img/icon/user_donate.png" alt="">
+
+                        <select name="server" id="">
+                            <option value="0" selected disabled>Выберите сервер</option>
+                            <option value="1">Сервер #1</option>
+                            <option value="2">Сервер #2</option>
+                        </select>
+
+                    </div>
+                    <div class="input_wrap">
+                        <img src="img/icon/user_donate.png" alt="">
+                        <input type="text" name="account" placeholder="Введите никнейм">
+                    </div>
+                    <div class="input_wrap">
+                        <img src="img/icon/mail.png" alt="">
+                        <input type="text" name="mail" id="email_confirm_modal" placeholder="Введите E-Mail">
+                    </div>
+                    <div class="input_wrap">
+                        <img src="img/icon/user_donate.png" alt="">
+
+                        <select name="method" id="">
+                            <option value="0" selected disabled>Выберите метод оплаты</option>
+                            <option value="1">UnitPay</option>
+                            <option value="2">QIWI</option>
+                        </select>
+
+                    </div>
+
+                    <input type="hidden" name="id_pack" id="id_pack">
+
+                    <div class="oferta">
+                        <!-- <input type="checkbox" class="styled-checkbox" name="" id=""> 
+                                            <label for="styled-checkbox-1"></label> -->
+                        <div class="checkbox">
+                            <div class="block">
+                                <img src="img/icon/confirm.png" alt="">
+                            </div>
+                            <input type="checkbox" name="" id="ofert_modal">
+                        </div>
+                        <label label for="styled-checkbox-1">Согласен с <a
+                                href="dogovor_oferty.pdf">Офертой</a></label>
+                    </div>
+                    <div class="footer_form">
+                        <button>Купить</button>
+                        <button data-bs-dismiss="modal">Отмена</button>
+                    </div>
+                </div>
+
+            </div>
+        </form>
+
+    </div>
+</div>
+<div class="modal fade" id="modalOferta" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Оферта</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Таким образом дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и
+                модернизации системы обучения кадров, соответствует насущным потребностям. Таким образом консультация с
+                широким активом позволяет оценить значение модели развития. <br><br>
+
+                Равным образом новая модель организационной деятельности обеспечивает широкому кругу (специалистов)
+                участие в формировании системы обучения кадров, соответствует насущным потребностям. Значимость этих
+                проблем настолько очевидна, что укрепление и развитие структуры позволяет оценить значение направлений
+                прогрессивного развития.<br><br>
+
+                Равным образом постоянное информационно-пропагандистское обеспечение нашей деятельности требуют
+                определения и уточнения дальнейших направлений развития. Значимость этих проблем настолько очевидна, что
+                дальнейшее развитие различных форм деятельности требуют определения и уточнения дальнейших направлений
+                развития. Повседневная практика показывает, что постоянный количественный рост и сфера нашей активности
+                играет важную роль в формировании систем массового участия.<br><br>
+
+                Разнообразный и богатый опыт укрепление и развитие структуры играет важную роль в формировании новых
+                предложений. Разнообразный и богатый опыт постоянный количественный рост и сфера нашей активности
+                требуют определения и уточнения существенных финансовых и административных условий. Разнообразный и
+                богатый опыт постоянный количественный рост и сфера нашей активности влечет за собой процесс внедрения и
+                модернизации системы обучения кадров, соответствует насущным потребностям.<br><br>
+
+                Равным образом сложившаяся структура организации требуют от нас анализа новых предложений. Равным
+                образом рамки и место обучения кадров позволяет выполнять важные задания по разработке существенных
+                финансовых и административных условий. Значимость этих проблем настолько очевидна, что дальнейшее
+                развитие различных форм деятельности играет важную роль в формировании соответствующий условий
+                активизации. Повседневная практика показывает, что начало повседневной работы по формированию позиции
+                представляет собой интересный эксперимент проверки систем массового участия. Задача организации, в
+                особенности же укрепление и развитие структуры позволяет выполнять важные задания по разработке модели
+                развития. Товарищи! дальнейшее развитие различных форм деятельности требуют определения и уточнения
+                систем массового участия.<br><br>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+        <footer>
+            <div class="container">
+                <div class="row ">
+                    <div class="col-xl-2 col-lg-2 col-md-2 logo_footer">
+                        <img src="img/logo.png" alt="">
+                    </div>
+                    <div class="col-xl-8 col-lg-8 col-md-8 links">
+                        <a href="dogovor_oferty.pdf">Договор оферты</a>
+                        <a href="politic.pdf">Политика конфиденциальности</a>
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-2 social_links">
+                        <a href="https://vk.com/russian_mobile" class="vk"><img src="img/icon/vk.png" alt=""></a>
+                        <a href="https://discord.gg/e8FFmcd9Hu" class="ds"><img src="img/icon/ds.png" alt=""></a>
+                        <a href="https://www.youtube.com/channel/UCCx1KUzQlGl6WYp7CmKY1Mw" class="yt"><img
+                                src="img/icon/yt.png" alt=""></a>
+                    </div>
+                    <div class="col-xl-12 justify-content-between align-items-center mb">
+                        <div class="copy"> </div> <!-- all rights reserved text -->
+                        <a href="mailto:pochta@matreshka.online" class="mail">notify@matrp.ru</a>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+
+    </div>
+    <script src="js/libs/vue.min.js"></script>
+    <script src="js/libs/jquery-3.5.1.min.js"></script>
+    <script src="js/libs/popper.min.js"></script>
+    <script src="js/libs/bootstrap.min.js"></script>
+    <script src="js/libs/bootstrap.bundle.min.js"></script>
+    <script src="js/libs/aos.js"></script>
+    <script src="js/libs/jquery.nice-select.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+    AOS.init();
+    </script>
+        </body>
+
+</html>

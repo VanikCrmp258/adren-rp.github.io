@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>МАТРЕШКА RP - Как начать играть</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="keywords"
+        content="гта россия,matreshka,crmp,крмп,перфект крмп,матрешка crmp,матрешка rp,скачать крмп,gta россия,gta russia,gta crmp,матрешка,матрешка-rp,матрешка role play,gta,criminal russia,cr-mp,gta,rp,roleplay,role play,samp,sa-mp,самп,са-мп,перфект,перфект-рп,перфект роле плей,гта,криминальная россия,кр-мп,играть онлайн,играть по сети,бесплатная игра,сервер,играть в гта,играть в gta,рп,начать">
+    <meta name="robots" content="index,follow" />
+
+    <link href="css/libs/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="shortcut icon" href="img/logo.png" type="image/png">
+    <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="stylesheet" href="css/media.min.css">
+    <link rel="stylesheet" href="css/libs/nice-select/nice-select.min.css">
+    <link href="css/libs/aos.css" rel="stylesheet">
+        </head>
+
+<body class="play_page">
+
+
+
+    
+    <div id="app_block">
+        <div class="video_modal" id="promo_video">
+
+            <img src="img/icon/close.png" alt="" class="close " @click="closeModal('promo_video')">
+            <iframe class="video"
+                src="https://www.youtube.com/embed/dvBQLuZetyo?enablejsapi=1&version=3&playerapiid=ytplayer"
+                frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video_modal" id="play_video">
+            <img src="img/icon/close.png" alt="" class="close" @click="closeModal('play_video')">
+            <iframe class="video"
+                src="https://www.youtube.com/embed/MsysFv0lac0?enablejsapi=1&version=3&playerapiid=ytplayer"
+                frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-3 col-lg-3 col-md-1 col-3 logo">
+                        <a href="index.html"><img src="img/logo.png" alt=""></a>
+                    </div>
+                    <div class="col-xl-9 col-lg-9 col-md-11 col-9">
+                        <div class="mobile_menu"></div>
+                        <div class="nav_menu">
+                            <a href="index.html" >
+                                <img src="img/icon/Home.png" alt=""> Главная
+                            </a>
+                            <a href="https://forum.matrp.ru">
+                                <img src="img/icon/forum.png" alt=""> Форум
+                            </a>
+                            <a href="donate.html" >
+                                <img src="img/icon/donate.png" alt=""> Пополнить счёт
+                                                                <b style="color: #7e51ff; margin-left: 5px">X2</b>
+                                                            </a>
+                            <a href="play.html" class="active">
+                                <img src="img/icon/game.png" alt=""> Как начать играть
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="play">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12 video_block">
+                <div class="text" data-aos="fade-right">
+                    Смотрите видеоинструкцию
+                </div>
+                <a href="play.html#" class="video_images" @click="openModal('play_video')" data-aos="fade-left"
+                    data-aos-delay="300">
+                    <img src="img/video_play.png" alt="">
+                </a>
+            </div>
+            <div class="col-xl-12">
+                <div class="or" data-aos="zoom-in" data-aos-delay="800">
+                    <div class="line"></div>
+                    <div class="text">или</div>
+                    <div class="line"></div>
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-5 ord-2">
+                <div class="info_play" data-aos="fade-up" data-aos-delay="1000">
+                    <div class="title">Как начать играть?</div>
+                    <div class="desc">Чтобы начать играть на нашем проекте - необходимо скачать и установить лаунчер и
+                        запустить его, всю загрузку и установку игры лаунчер сделает сам</div>
+                    <div class="instruct">Скачай и установи лаунчер, дождись загрузки файлов и начни играть!</div>
+                    <a href="https://cdn.matrp.ru/matrp_mobile/client_matrp.apk" class="btn_download">Скачать
+                        лаунчер</a>
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-7 ord-1"><img src="img/telephone.png" data-aos="fade-left" alt=""
+                    data-aos-delay="1300" class="telephone"></div>
+        </div>
+    </div>
+</section>
+
+        <footer>
+            <div class="container">
+                <div class="row ">
+                    <div class="col-xl-2 col-lg-2 col-md-2 logo_footer">
+                        <img src="img/logo.png" alt="">
+                    </div>
+                    <div class="col-xl-8 col-lg-8 col-md-8 links">
+                        <a href="dogovor_oferty.pdf">Договор оферты</a>
+                        <a href="politic.pdf">Политика конфиденциальности</a>
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-2 social_links">
+                        <a href="https://vk.com/russian_mobile" class="vk"><img src="img/icon/vk.png" alt=""></a>
+                        <a href="https://discord.gg/e8FFmcd9Hu" class="ds"><img src="img/icon/ds.png" alt=""></a>
+                        <a href="https://www.youtube.com/channel/UCCx1KUzQlGl6WYp7CmKY1Mw" class="yt"><img
+                                src="img/icon/yt.png" alt=""></a>
+                    </div>
+                    <div class="col-xl-12 justify-content-between align-items-center mb">
+                        <div class="copy"> </div> <!-- all rights reserved text -->
+                        <a href="mailto:pochta@matreshka.online" class="mail">notify@matrp.ru</a>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+
+    </div>
+    <script src="js/libs/vue.min.js"></script>
+    <script src="js/libs/jquery-3.5.1.min.js"></script>
+    <script src="js/libs/popper.min.js"></script>
+    <script src="js/libs/bootstrap.min.js"></script>
+    <script src="js/libs/bootstrap.bundle.min.js"></script>
+    <script src="js/libs/aos.js"></script>
+    <script src="js/libs/jquery.nice-select.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+    AOS.init();
+    </script>
+        </body>
+
+</html>
